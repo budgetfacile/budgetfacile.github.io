@@ -1,0 +1,61 @@
+:root {
+  --vert: #2e7d5b;
+  --vert-clair: #e6f2ec;
+  --orange: #e07a5f;
+  --texte: #2a2a2a;
+  --gris: #6b6b6b;
+  --fond: #f7f4ee;
+  --carte: #ffffff;
+  --bord: #e2ddd3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vert: #6cc49a;
+    --vert-clair: #1f3a2e;
+    --texte: #ece9e2;
+    --gris: #a9a59c;
+    --fond: #171a18;
+    --carte: #212522;
+    --bord: #333a35;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.conteneur { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--vert); }
+.entete { border-bottom: 1px solid var(--bord); background: var(--carte); }
+.entete .conteneur { display: flex; justify-content: space-between; align-items: center; min-height: 60px; flex-wrap: wrap; gap: 8px; }
+.logo { font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--texte); }
+.logo span { color: var(--vert); }
+nav a { margin-left: 18px; text-decoration: none; font-weight: 600; }
+.intro { padding: 40px 0 16px; }
+.intro h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; color: var(--vert); }
+.grille { display: grid; gap: 16px; padding-bottom: 40px; }
+.carte {
+  display: block; background: var(--carte); border: 1px solid var(--bord); border-radius: 12px;
+  padding: 18px 20px; text-decoration: none; color: var(--texte);
+}
+.carte h2 { font-size: 1.15rem; margin: 0 0 6px; color: var(--vert); }
+.carte p { margin: 0 0 12px; color: var(--gris); }
+.article { padding: 32px 0 40px; }
+.article h1 { font-size: 1.9rem; line-height: 1.25; color: var(--vert); margin-bottom: 4px; }
+.article h2 { font-size: 1.35rem; margin-top: 32px; }
+.date { color: var(--gris); font-size: 0.9rem; margin-top: 0; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--bord); padding: 6px 10px; text-align: left; }
+th { background: var(--vert); color: #fff; }
+td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.tableau-defile { overflow-x: auto; }
+.encart { background: var(--vert-clair); border-radius: 12px; padding: 18px 20px; margin-top: 36px; }
+.encart-titre { font-weight: 700; margin: 0 0 6px; color: var(--vert); }
+.bouton {
+  display: inline-block; background: var(--orange); color: #fff; text-decoration: none;
+  font-weight: 700; padding: 10px 18px; border-radius: 999px;
+}
+.pied { border-top: 1px solid var(--bord); padding: 24px 0; color: var(--gris); font-size: 0.9rem; }
+.petit { font-size: 0.8rem; }
